@@ -1,0 +1,827 @@
+/* Genel stil ve sıfırlama */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #fff;
+    color: #000;
+    min-height: 100vh;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    flex: 1;
+}
+
+a {
+    color: #fff;
+    text-decoration: none;
+}
+
+ul li {
+    list-style: none;
+}
+
+h2 {
+    font-size: 2.1rem;
+    text-align: center;
+}
+
+/* Header stil */
+.navbar {
+    background: linear-gradient(to right, black, blue);
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0px 10px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar-menu {
+    display: flex;
+    gap: 30px;
+}
+
+.navbar-menu a {
+    font-size: 18px;
+    padding: 10px;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+
+}
+
+.navbar-menu a:hover {
+    background-color: #ffffff;
+    color: #000;
+    transform: translateY(-5px);
+}
+
+.logo img {
+    width: 100px;
+    height: auto;
+}
+
+/* Hero Section */
+.hero-wave-wrapper {
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+    position: relative;
+    background: #fff;
+    height: 400px;
+    /* Boşluk ekledik */
+}
+
+.hero-wave {
+    display: block;
+    width: 100%;
+    height: auto;
+    position: absolute;
+    top: 0;
+}
+
+.hero-text {
+    text-align: center;
+    color: white;
+    position: relative;
+    z-index: 2;
+}
+
+.hero-text h1 {
+    font-size: 36px;
+    margin-bottom: 15px;
+}
+
+.hero-text .subtitle {
+    font-size: 18px;
+    font-weight: 400;
+    margin-bottom: 30px;
+}
+
+.section {
+    padding: 40px 0 64px 0;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+}
+
+.section-blue {
+    background-color: #000283;
+}
+
+.features h2 {
+    padding-bottom: 10px;
+    text-decoration: underline rgba(41, 121, 255, 0.6);
+}
+
+.feature-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 34px;
+
+}
+
+.feature-item {
+    border-radius: 20px;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+    background-color: #efeded;
+    padding: 36px 19px 25px 19px;
+    transition: box-shadow 0.23s, transform 0.28s;
+    position: relative;
+    overflow: hidden;
+}
+
+.feature-icon {
+    width: 54px;
+    height: 54px;
+    border-radius: 50%;
+    margin: 0 auto 13px auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #fff;
+    box-shadow: 0 2.5px 19px #b6dfff10;
+}
+
+.feature-item h3 {
+    margin-bottom: 0.50em;
+    font-size: 1.15rem;
+}
+
+.feature-item p {
+    color: #5b7095;
+    font-size: 1.02rem;
+    margin-bottom: 0;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 28px;
+    color: #000283;
+    align-items: center;
+    text-align: center;
+}
+
+.how-it-works h2 {
+    color: #fff;
+    padding-bottom: 10px;
+    text-decoration: underline rgba(250, 250, 250, 0.6);
+}
+
+.steps-row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 22px;
+    flex-wrap: wrap;
+}
+
+.step h3 {
+    font-size: 1.09rem;
+    color: #314b80;
+    margin-bottom: 0.33em;
+}
+
+.step {
+    background-color: #efeded;
+    border-radius: 20px;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+    padding: 36px 19px 25px 19px;
+    min-width: 180px;
+    max-width: 290px;
+    transition: box-shadow 0.23s, transform 0.28s;
+}
+
+.step-arrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 35px;
+    margin-bottom: 0;
+}
+
+.step-icon {
+    font-weight: bold;
+    color: #fff;
+    background: #000283;
+    border-radius: 50%;
+    width: 42px;
+    height: 42px;
+    font-size: 1.44rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 15px auto;
+    box-shadow: 0 2px 12px #2979FF28;
+    border: 3px solid #BFD7FF;
+}
+
+
+.about-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.about-container h2 {
+    padding-bottom: 10px;
+    text-decoration: underline rgba(41, 121, 255, 0.6);
+}
+
+.about-content {
+    flex: 1 1 320px;
+    min-width: 290px;
+    max-width: 500px;
+}
+
+.about-content h2 {
+    text-align: left;
+}
+
+.about-content p {
+    line-height: 1.5;
+    word-spacing: 1.5;
+}
+
+.about-image {
+    flex: 1 1 250px;
+    min-width: 180px;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.about-image svg {
+    width: 400px;
+    height: auto;
+}
+
+.btn-cargo-tracking {
+    margin-top: 5px;
+    display: inline-flex;
+    padding: 13px 30px;
+    border-radius: 30px;
+    color: #000283;
+    background-color: #ffffff;
+    border: 1.4px solid #000283;
+    font-weight: bold;
+    box-shadow: 0 4px 10px #0057f8;
+}
+
+.btn-cargo-tracking:hover {
+    background: #000283;
+    color: #fff;
+}
+
+.contact-details {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 34px;
+    gap: 36px;
+}
+
+.contact-item {
+    min-width: 180px;
+    max-width: 300px;
+    box-shadow: rgba(41, 121, 255, 0.063) 0px 3px 12px;
+    text-align: center;
+    margin-bottom: 0px;
+    flex: 1 1 200px;
+    background: #efeded;
+    border: 1px solid var(--border-color);
+    border-radius: 15px;
+    padding: 28px 11px 25px;
+    transition: box-shadow 0.22s;
+}
+
+.contact-icon {
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgb(238, 247, 255);
+    border-radius: 50%;
+    margin: 0px auto 11px;
+}
+
+.contact-item h4 {
+    font-size: 1.05rem;
+    margin-bottom: 7px;
+}
+
+/* Kargo Takip Formu */
+.tracking-form {
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+    width: 80%;
+    max-width: 600px;
+    text-align: center;
+}
+
+.tracking-form input[type="text"] {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+.tracking-form button {
+    width: 100%;
+    padding: 12px 20px;
+    background-color: #fff;
+    color: #10afff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.tracking-form button:hover {
+    background-color: #000283;
+    font-size: 18px;
+}
+
+.tracking-form button svg {
+    vertical-align: middle;
+    margin-right: 8px;
+}
+
+.track-page-form {
+    background: linear-gradient(to right, black, blue);
+}
+
+.track-page-form button:hover {
+    background-color: #000283;
+    font-size: 18px;
+}
+
+.toggle-btn {
+    width: 30px;
+    height: 25px;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    z-index: 1001;
+}
+
+.toggle-btn .bar {
+    height: 4px;
+    width: 100%;
+    background-color: white;
+    transition: 0.4s;
+    border-radius: 2px;
+}
+
+/* Açıldığında X görünümü */
+.toggle-btn.open .bar:nth-child(1) {
+    transform: rotate(45deg) translate(8px, 7px);
+}
+
+.toggle-btn.open .bar:nth-child(3) {
+    transform: rotate(-45deg) translate(8px, -6px);
+}
+
+/* Page Title */
+.page-title {
+    text-align: center;
+    color: var(--text-primary);
+    font-weight: 600;
+    margin-bottom: 35px;
+    font-size: 1.8em;
+}
+
+.tracking-container {
+    max-width: 1100px;
+    margin: 25px auto;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
+    overflow: hidden;
+}
+
+/* Card Base Style */
+.card {
+    padding: 24px;
+    border-bottom: 1px solid #e4e6eb;
+    /* Lighter border */
+}
+
+.card:last-child {
+    border-bottom: none;
+}
+
+/* Headings */
+.tracking-container h2 {
+    font-size: 1.4em;
+    color: #05668d;
+    margin-bottom: 20px;
+    font-weight: 600;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #e4e6eb;
+}
+
+.cargo-details .detail-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 15px;
+}
+
+.cargo-details .detail-item {
+    padding: 10px 0;
+    font-size: 0.95em;
+    display: flex;
+    flex-direction: column;
+    border-bottom: 1.5px dashed #e4e6eb;
+}
+
+.cargo-details .label {
+    font-weight: 500;
+    color: #606770;
+    margin-bottom: 4px;
+    font-size: 0.85em;
+}
+
+.cargo-details .value {
+    color: #1c1e21;
+    font-weight: 500;
+}
+
+.status {
+    display: inline-block;
+    font-weight: bold;
+    padding: 4px 10px;
+    border-radius: 12px;
+    color: #fff;
+    font-size: 0.9em;
+    text-align: center;
+    margin-top: 2px;
+}
+
+.status-intransit {
+    background-color: #ffb400;
+    color: #333;
+}
+
+.cargo-history {
+    padding: 24px;
+}
+
+.timeline {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    position: relative;
+    padding-left: 25px;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 10px;
+    top: 15px;
+    bottom: 15px;
+    width: 3px;
+    background-color: #ccd0d5;
+    border-radius: 2px;
+}
+
+.timeline-item {
+    margin-bottom: 20px;
+    position: relative;
+    padding-left: 30px;
+}
+
+.timeline-item:last-child {
+    margin-bottom: 0;
+}
+
+.timeline-marker {
+    position: absolute;
+    left: 0;
+    top: 5px;
+    width: 21px;
+    height: 21px;
+    background-color: #ffffff;
+    border: 3px solid #ccd0d5;
+    border-radius: 50%;
+    z-index: 1;
+    transition: all 0.3s ease;
+}
+
+.timeline-item.current .timeline-marker {
+    border-color: #05668d;
+    background-color: #05668d;
+    transform: scale(1.1);
+}
+
+.timeline-item.current .timeline-marker::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 7px;
+    height: 7px;
+    background-color: #fff;
+    border-radius: 50%;
+}
+
+
+.timeline-item.initial .timeline-marker {
+    border-color: #8a8d91;
+}
+
+
+.timeline-content {
+    background-color: #f7f8fa;
+    padding: 12px 16px;
+    border-radius: 6px;
+    border: 1px solid #e4e6eb;
+    position: relative;
+}
+
+.timeline-item.current .timeline-content {
+    border-color: #cce7f5;
+    background-color: #f0f8ff;
+}
+
+.timeline-content .time {
+    font-size: 0.8em;
+    color: #606770;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.timeline-content p {
+    margin: 0 0 5px 0;
+    font-size: 0.95em;
+    color: #1c1e21;
+    font-weight: 500;
+}
+
+.timeline-content .location {
+    font-size: 0.85em;
+    color: #606770;
+    font-style: normal;
+    display: flex;
+    align-items: center;
+}
+
+
+.timeline-content .location::before {
+    content: '📍';
+    margin-right: 5px;
+    font-size: 0.9em;
+    opacity: 0.7;
+}
+
+
+@media (max-width: 768px) {
+    .tracking-container {
+        margin: 15px auto;
+    }
+
+    .card,
+    .cargo-history {
+        padding: 16px;
+    }
+
+    .tracking-container h2 {
+        font-size: 1.2em;
+    }
+
+    .cargo-details .detail-grid {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+
+    .timeline {
+        padding-left: 20px;
+    }
+
+    .timeline-item {
+        padding-left: 25px;
+    }
+
+    .timeline-marker {
+        left: -3px;
+        width: 18px;
+        height: 18px;
+    }
+
+    .timeline-item.current .timeline-marker::after {
+        width: 5px;
+        height: 5px;
+    }
+
+}
+
+/* Footer */
+footer {
+    background: linear-gradient(to right, black, blue);
+    color: #e3eaf4;
+    padding: 46px 0 10px 0;
+    border-top-left-radius: 24px;
+    border-top-right-radius: 24px;
+    box-shadow: 0 -2px 24px #2979ff21;
+    position: relative;
+    overflow: hidden;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(185px, 1fr));
+    gap: 32px;
+    align-items: start;
+    max-width: 1150px;
+}
+
+.footer-column {
+    padding-bottom: 13px;
+}
+
+.footer-column .logo img {
+    width: 180px;
+    height: auto;
+}
+
+.footer-column h4 {
+    color: #fff;
+    margin-bottom: 17px;
+    font-size: 1.13rem;
+    letter-spacing: -1px;
+}
+
+.footer-column a {
+    display: block;
+    color: #aad1ff;
+    margin-bottom: 8px;
+    font-size: 0.99rem;
+    transition: color 0.16s;
+}
+
+.footer-column a:hover {
+    color: #fff;
+    transform: translateY(-2px);
+}
+
+.footer-column p {
+    margin: 0 0 10px 0;
+    color: #bbdaff;
+    font-size: 0.97rem;
+}
+
+.footer-bottom {
+    font-size: 0.98rem;
+    padding: 8px 0 0;
+    margin-top: 40px;
+    text-align: center;
+    box-shadow: 0 -1.5px 8px #2979ff12;
+}
+
+
+/* Responsive Tasarım */
+@media(max-width: 768px) {
+    h2 {
+        font-size: 1.40rem;
+    }
+
+    p {
+        font-size: 0.96rem;
+    }
+
+    /* Hero kısmı mobilde daha küçük ve uygun hale geldi */
+    .hero-wave-wrapper {
+        height: 350px;
+        padding-top: 40px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        /* Düşük ekranlarda padding azaltıldı */
+    }
+
+    .hero-wave {
+        height: 400px;
+
+    }
+
+    .logo img {
+        width: 80px;
+        height: auto;
+    }
+
+    .hero-text h1 {
+        font-size: 22px;
+    }
+
+    .hero-text .subtitle {
+        font-size: 14px;
+    }
+
+    /* Formu mobilde daha uyumlu hale getirme */
+    .tracking-form {
+        width: 90%;
+        padding: 20px;
+        top: 30px;
+    }
+
+    .tracking-form input[type="text"],
+    .tracking-form button {
+        font-size: 14px;
+    }
+
+    .navbar-menu::before {
+        content: "";
+        display: block;
+        border-top: 1px solid #fff;
+    }
+
+    .navbar-menu {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+        gap: 20px;
+    }
+
+    .navbar-menu a {
+        font-size: 16px;
+    }
+
+    .navbar-menu a:last-child {
+        margin-bottom: 20px;
+    }
+
+    .navbar-menu.active {
+        display: flex;
+    }
+
+    .toggle-btn {
+        display: flex;
+    }
+
+    .section {
+        padding: 35px 0;
+
+    }
+
+    .steps-row {
+        gap: 11px;
+    }
+
+    .about-image svg {
+
+        width: 250px;
+        height: auto;
+    }
+
+    .footer-column .logo img {
+        width: 120px;
+        height: auto;
+    }
+
+    .footer-content {
+        gap: 5px;
+    }
+
+    footer {
+        padding: 10px 0 5px 0;
+    }
+
+    .footer-column h4 {
+        margin-bottom: 12px;
+        font-size: 1.09rem;
+    }
+
+    .footer-column a {
+        margin-bottom: 6px;
+        font-size: 0.97rem;
+    }
+
+    .footer-bottom {
+        padding: 0;
+        margin-top: 15px;
+        font-size: 0.92rem;
+    }
+}
